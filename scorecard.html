@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boise Ranch Golf Course</title>
+
+    <!-- Western + Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* SCORECARD */
+        
+        
+        .scorecard-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .scorecard-card {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .scorecard-card h3 {
+            font-family: 'Rye', cursive;
+            margin-bottom: 15px;
+        }
+
+        .scorecard-card img {
+            width: 100%;
+            border: 4px solid #c19a6b;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="BoiseRanchLogo2.png" style="height:140px;" alt="Boise Ranch Logo" srcset="">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">BOOK TEE TIMES</a>
+            <div class="dropdown">
+                <a href="#">The Golf Course ▾</a>
+                <div class="dropdown-content">
+                    <a href="scorecard.html">Scorecard</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="#">Calendar Events</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Membership ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Season Pass</a>
+                    <a href="#">Mens Association</a>
+                    <a href="#">Womens Association</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Outings ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Events</a>
+                    <a href="#">On-Site Catering</a>
+                    <a href="#">Request an Outing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Golf Instruction ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Lessons</a>
+                    <a href="#">Junior Golf</a>
+                    <a href="#">Sip & Chip Golf Lessons</a>
+                </div>
+            </div>
+            <a href="#">Contact Us</a>
+            <a href="#">Join Our Email Club!</a>
+            <a href="#">Web Specials</a>
+        </div>
+    </nav>
+
+
+    <!-- SECTION -->
+
+
+    <main>
+
+        <!-- HEADER -->
+        <section class="section" style="background-color:#efe6d8;">
+            <h2>Course Scorecard</h2>
+            <div class="divider"></div>
+            <p style="max-width: 700px; margin: 0 auto;">
+                View our official Boise Ranch scorecard. Plan your round and take on one of Idaho’s most scenic and
+                challenging courses.
+            </p>
+        </section>
+
+        <!-- SCORECARD IMAGES -->
+        <section class="section">
+            <div class="scorecard-container">
+
+                <div class="scorecard-card">
+                    <h3>Front 9</h3>
+                    <img src="2018-scorecard-Front.jpg" alt="Boise Ranch Scorecard Front">
+                </div>
+
+                <div class="scorecard-card">
+                    <h3>Back 9</h3>
+                    <img src="2018-scorecard-Back.jpg" alt="Boise Ranch Scorecard Back">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Boise Ranch Golf Course</p>
+    </footer>
+
+</body>
+
+</html>

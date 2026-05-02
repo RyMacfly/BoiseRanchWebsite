@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boise Ranch Golf Course</title>
+
+    <!-- Western + Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>/* PAGE LAYOUT */
+        /* TOP SPLIT ONLY */
+.top-layout {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    align-items: stretch;
+}
+
+/* NEWS */
+.news-sidebar {
+    width: 280px;
+    background-color: #3b2a1f;
+    color: #f5e6c8;
+    padding: 20px;
+    border-radius: 6px;
+    border: 3px solid #c19a6b;
+}
+
+/* WELCOME TAKES REST */
+.welcome-section {
+    flex: 1;
+}
+        
+        /* SIDEBAR */
+        .news-sidebar {
+            width: 280px;
+            background-color: #3b2a1f;
+            color: #f5e6c8;
+            padding: 20px;
+            border-radius: 6px;
+            border: 3px solid #c19a6b;
+            height: fit-content;
+        }
+        
+        .news-sidebar h3 {
+            font-family: 'Rye', cursive;
+            margin-bottom: 15px;
+        }
+        
+        .news-item {
+            margin-bottom: 15px;
+        }
+        
+        .news-item p {
+            font-size: 0.9rem;
+        }
+        
+        /* MAIN CONTENT */
+        .main-content {
+            flex: 1;
+        }</style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="BoiseRanchLogo2.png" class="nav-logo" alt="Boise Ranch Logo" srcset="">
+        </div>
+        <div class="nav-links">
+            <a href="">Home</a>
+            <a href="#">BOOK TEE TIMES</a>
+            <div class="dropdown">
+                <a href="#">The Golf Course ▾</a>
+                <div class="dropdown-content">
+                    <a href="scorecard.html">Scorecard</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="#">Calendar Events</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Membership ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Season Pass</a>
+                    <a href="#">Mens Association</a>
+                    <a href="#">Womens Association</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Outings ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Events</a>
+                    <a href="#">On-Site Catering</a>
+                    <a href="#">Request an Outing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Golf Instruction ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Lessons</a>
+                    <a href="#">Junior Golf</a>
+                    <a href="#">Sip & Chip Golf Lessons</a>
+                </div>
+            </div>
+            <a href="#">Contact Us</a>
+            <a href="#">Join Our Email Club!</a>
+            <a href="#">Web Specials</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Boise Ranch Golf Course</h1>
+            <p>Championship Golf with a True Western Spirit</p>
+            <a href="#" class="cta-button">Book Tee Times</a>
+        </div>
+    </section>
+
+    <!-- SECTION -->
+
+
+
+    <!-- NEW INFO SECTION -->
+    <main>
+
+        <!-- TOP ROW (SIDE BY SIDE) -->
+        <div class="top-layout">
+    
+            <!-- NEWS -->
+            <aside class="news-sidebar">
+                <h3>Course Updates</h3>
+    
+                <div class="news-item">
+                    <strong>Spring Specials Live</strong>
+                    <p>Check out our latest web specials for discounted tee times this season.</p>
+                </div>
+    
+                <div class="news-item">
+                    <strong>Course Conditions</strong>
+                    <p>Greens are in great shape! Come enjoy smooth and fast play this week.</p>
+                </div>
+    
+                <div class="news-item">
+                    <strong>Upcoming Events</strong>
+                    <p>Weekend tournaments and events are now open for registration.</p>
+                </div>
+            </aside>
+    
+            <!-- WELCOME -->
+            <section class="section welcome-section" style="background-color:#efe6d8;">
+                <h2>Welcome to Boise Ranch</h2>
+                <div class="divider"></div>
+    
+                <p>
+                    Thank you for visiting Boise Ranch! Check out our new Web Specials for great year-round bargains.
+                    New Web Specials are added often to our site, so please check back frequently.
+                    We look forward to seeing you on the course!
+                </p>
+    
+                <p>
+                    Boise Ranch Golf Course is an 18-hole championship-style course, offering a challenging yet fair test
+                    of golf for players of all skill levels. With undulating greens, eight lakes and ponds, the 6,611-yard,
+                    par 71 layout includes one of the longest par 5s in the state of Idaho.
+                </p>
+            </section>
+    
+        </div>
+    
+        <!-- FULL WIDTH SECTION BELOW -->
+        <section class="section">
+            <h2>Experience the Ranch</h2>
+            <div class="divider"></div>
+            <p>
+                Wide open fairways, rolling terrain, and the rugged beauty of Idaho.
+                Boise Ranch offers a unique golf experience where tradition meets the modern game.
+            </p>
+        </section>
+    
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Boise Ranch Golf Course</p>
+    </footer>
+
+</body>
+
+</html>

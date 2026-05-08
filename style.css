@@ -42,7 +42,9 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 22px;
+    gap: 12px;
+    flex-wrap: wrap;      /* allows links to move to next row */
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -226,11 +228,10 @@ footer {
         padding: 15px 20px;
     }
 
-    .logo img {
-        height: 70px;
-        width: auto;
-        /* shrink logo */
-    }
+   .nav-logo {
+        height: 40px;
+
+   }
 
     .nav-links {
         flex-direction: column;

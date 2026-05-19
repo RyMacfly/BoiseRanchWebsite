@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .season-pass {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .season-pass h1 {
+            font-family: 'Rye', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.7;
+        }
+
+        .pass-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .pass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* removed transition */
+        }
+
+        /* REMOVED HOVER EFFECT COMPLETELY */
+
+        /* Contact button */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: #3c281e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .contact-btn:hover {
+            background: #5a3a2a;
+        }
+
+
+        .pass-card h2 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            opacity: 0.75;
+            margin-top: 10px;
+        }
+
+        .featured {
+            border: 2px solid #3c281e;
+        }
+
+        .info-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f6f3;
+            border-radius: 10px;
+        }
+
+        .info-section h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <div id="navbar"></div>
+
+    <!-- Main -->
+    <main>
+        <section class="season-pass">
+            <h1>2026 Season Passes</h1>
+            <div class="divider"></div>
+            <p class="subtitle">Choose the pass that fits your game</p>
+
+            <!-- PASS TYPES -->
+            <div class="pass-grid">
+
+                <div class="pass-card featured">
+                    <h2>Unlimited Pass</h2>
+                    <p class="price">Individual: $2,350.00</p>
+                    <p class="price">Couple: $3,350.00</p>
+                    <p class="note">No restrictions • 7 days in advance tee times</p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Weekday Pass</h2>
+                    <p class="price">Individual: $1,794.00</p>
+                    <p class="price">Couple: $2,695.00</p>
+                    <p class="price">Junior Add-on: $495.00</p>
+                    <p class="note">Mon–Fri anytime • 7 days advance tee times</p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Half Price Pass</h2>
+                    <p class="price">$695.00</p>
+                    <p class="note">50% off green fees • No restrictions • 7 days advance tee times</p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Youth Golf Pass</h2>
+                    <p class="price">$50.00</p>
+                    <p class="note">
+                        Valid after 3:00 PM<br>
+                        $10 green fee • Ages 17 & under<br>
+                        Tee times: 2 days in advance
+                    </p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Season Cart Pass</h2>
+                    <p class="price">$795.00</p>
+                    <p class="note">Individual cart pass</p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Trail Fee Season Pass</h2>
+                    <p class="price">$440.00</p>
+                    <p class="note">Per privately owned golf cart</p>
+                </div>
+
+                <div class="pass-card">
+                    <h2>Season Range Pass</h2>
+                    <p class="price">$475.00</p>
+                    <p class="note">Unlimited range balls</p>
+                </div>
+
+            </div>
+
+            <!-- RESTRICTIONS -->
+            <section class="info-section">
+                <h2>Restrictions</h2>
+                <ul>
+                    <li><strong>Unlimited Pass:</strong> No restrictions • 7 days advance tee times</li>
+                    <li><strong>Weekday Pass:</strong> Monday–Friday anytime • 7 days advance tee times</li>
+                    <li><strong>Half Price Pass:</strong> 50% green fees • No restrictions • 7 days advance tee times
+                    </li>
+                    <li><strong>Youth Pass:</strong> After 3:00 PM • $10 green fee • 2-day advance tee times</li>
+                </ul>
+            </section>
+
+            <!-- DISCOUNTS -->
+            <section class="info-section">
+                <h2>Discounts</h2>
+                <p>Save 3% when paying with cash or check on select passes.</p>
+                <p><strong>Weekday Pass:</strong> $100 discount for seniors & military (max $100 discount)</p>
+            </section>
+
+            <!-- CONTACT BUTTON -->
+            <div style="text-align:center; margin-top: 40px;">
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- nav/footer script -->
+
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const text = await response.text();
+            document.getElementById(id).innerHTML = text;
+        }
+
+        loadComponent("navbar", "navbar.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+
+</html>

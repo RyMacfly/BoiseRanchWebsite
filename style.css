@@ -22,11 +22,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
-
-    /*TODO add or delete gradient*/
     background:rgba(92, 58, 38, 0.96);
-     
-
     border-bottom: 3px solid #c19a6b;
 }
 

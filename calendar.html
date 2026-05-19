@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar of Events | Boise Ranch Golf Course</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* PAGE */
+        .events-page {
+            padding: 60px 40px;
+            background-color: #efe6d8;
+        }
+
+        .events-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .events-header h1 {
+            font-family: 'Rye', cursive;
+            font-size: 2.8rem;
+            color: #3b2a1f;
+        }
+
+        .events-layout {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        /* CALENDAR CARD */
+        .calendar-card {
+            flex: 1;
+            background-color: #f8f2e8;
+            border: 3px solid #c19a6b;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .calendar-card h2 {
+            font-family: 'Rye', cursive;
+            margin-bottom: 20px;
+            color: #3b2a1f;
+        }
+
+        /* SIDEBAR */
+        .events-sidebar {
+            width: 300px;
+            background-color: #3b2a1f;
+            color: #f5e6c8;
+            border-radius: 10px;
+            padding: 25px;
+            border: 3px solid #c19a6b;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .events-sidebar h3 {
+            font-family: 'Rye', cursive;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .upcoming-event {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .upcoming-event:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .upcoming-event strong {
+            display: block;
+            color: #ffcf91;
+            margin-bottom: 6px;
+        }
+
+        .upcoming-event p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* FULLCALENDAR CUSTOM */
+        .fc {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fc-toolbar-title {
+            font-family: 'Rye', cursive;
+            color: #3b2a1f;
+        }
+
+        .fc-button {
+            background-color: #8b5e34 !important;
+            border: none !important;
+        }
+
+        .fc-button:hover {
+            background-color: #6b4f2a !important;
+        }
+
+        .fc-event {
+            background-color: #c19a6b;
+            border: none;
+            padding: 2px;
+        }
+
+        .fc-daygrid-day:hover {
+            background-color: rgba(193, 154, 107, 0.08);
+        }
+
+        /* MOBILE */
+        @media (max-width: 1000px) {
+            .events-layout {
+                flex-direction: column;
+            }
+
+            .events-sidebar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .events-page {
+                padding: 40px 20px;
+            }
+
+            .events-header h1 {
+                font-size: 2rem;
+            }
+
+            .fc-toolbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="BoiseRanchLogoNew.png" style="height: 5em" class="nav-logo" alt="Boise Ranch Logo" srcset="">
+        </div>
+        <div class="nav-links">
+            <a href="">Home</a>
+            <a href="#">BOOK TEE TIMES</a>
+            <div class="dropdown">
+                <a href="#">The Golf Course ▾</a>
+                <div class="dropdown-content">
+                    <a href="scorecard.html">Scorecard</a>
+                    <a href="rates.html">Rates</a>
+                    <a href="calendar.html">Calendar Events</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Membership ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Season Pass</a>
+                    <a href="#">Mens Association</a>
+                    <a href="#">Womens Association</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Outings ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Events</a>
+                    <a href="#">On-Site Catering</a>
+                    <a href="#">Request an Outing</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Golf Instruction ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Golf Lessons</a>
+                    <a href="#">Junior Golf</a>
+                    <a href="#">Sip & Chip Golf Lessons</a>
+                </div>
+            </div>
+            <a href="#">Contact Us</a>
+            <a href="#">Join Our Email Club!</a>
+            <a href="#">Web Specials</a>
+        </div>
+    </nav>
+
+    <!-- EVENTS PAGE -->
+    <section class="events-page">
+
+        <div class="events-header">
+            <h1>Calendar of Events</h1>
+            <div class="divider"></div>
+        </div>
+
+        <div class="events-layout">
+
+            <!-- CALENDAR -->
+            <div class="calendar-card">
+
+                <h2>Boise Ranch Event Calendar</h2>
+
+                <div id="calendar"></div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="events-sidebar">
+
+                <h3>Featured Events</h3>
+
+                <div class="upcoming-event">
+                    <strong>Spring Scramble</strong>
+                    <p>
+                        Join us May 9th for our annual Spring Scramble tournament.
+                        4-person teams, prizes, food, and live scoring.
+                    </p>
+                </div>
+
+                <div class="upcoming-event">
+                    <strong>Junior Golf Clinic</strong>
+                    <p>
+                        Saturday morning instruction sessions for junior golfers ages 8–16.
+                    </p>
+                </div>
+
+                <div class="upcoming-event">
+                    <strong>Demo Day</strong>
+                    <p>
+                        Try the newest clubs and equipment from top golf manufacturers.
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Boise Ranch Golf Course</p>
+    </footer>
+
+    <!-- FullCalendar Script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+
+                height: 'auto',
+
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,listMonth'
+                },
+
+                events: [
+                    {
+                        title: 'Spring Scramble',
+                        start: '2026-05-09'
+                    },
+                    {
+                        title: 'Junior Clinic',
+                        start: '2026-05-16'
+                    },
+                    {
+                        title: 'Demo Day',
+                        start: '2026-05-22'
+                    },
+                    {
+                        title: 'Member Tournament',
+                        start: '2026-05-30'
+                    }
+                ]
+            });
+
+            calendar.render();
+        });
+    </script>
+
+</body>
+
+</html>

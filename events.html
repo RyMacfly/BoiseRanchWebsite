@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Events & Catering</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .events-section {
+            background-color: #efe6d8;
+            padding-bottom: 50px;
+        }
+
+        .events-hero {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .events-hero img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 25px;
+            border: 4px solid #c19a6b;
+        }
+
+        .events-hero p {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .events-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .events-card {
+            background-color: #3b2a1f;
+            color: #f5e6c8;
+            border: 3px solid #c19a6b;
+            border-radius: 8px;
+            width: 320px;
+            overflow: hidden;
+        }
+
+        .events-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .events-card-content {
+            padding: 22px;
+        }
+
+        .events-card h3 {
+            font-family: 'Rye', cursive;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .events-card p {
+            line-height: 1.6;
+        }
+
+        .events-card ul {
+            padding-left: 22px;
+            margin-top: 15px;
+        }
+
+        .events-card li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 700px) {
+            .events-hero img {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HEADER -->
+        <section class="section events-section">
+
+            <div class="events-hero">
+
+                <h2>Golf Events & Catering</h2>
+
+                <div class="divider"></div>
+
+                <p>
+                    Boise Ranch is the perfect setting for your next golf event.
+                    Whether the occasion is a large fundraising tournament,
+                    an intimate corporate outing, or a customer appreciation event,
+                    Boise Ranch has golf packages available for groups of all sizes.
+                    Our professional event staff will assist you with every detail
+                    in planning your event.
+                </p>
+
+                <br>
+
+                <p>
+                    Complete catering packages are available to accommodate your
+                    post-event needs. We offer a variety of creative menu options
+                    sure to satisfy any hungry golfer.
+                </p>
+
+               
+            </div>
+
+            <!-- EVENT CARDS -->
+            <div class="events-container">
+
+                <!-- TOURNAMENTS -->
+                <div class="events-card">
+
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop"
+                        alt="Golf Outing">
+
+                    <div class="events-card-content">
+
+                        <h3>Golf Outings</h3>
+
+                        <p>
+                            Boise Ranch hosts tournaments and outings for groups of all sizes.
+                        </p>
+
+                        <ul>
+                            <li>Corporate tournaments</li>
+                            <li>Charity fundraisers</li>
+                            <li>League outings</li>
+                            <li>Customer appreciation events</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- EVENTS -->
+                <div class="events-card">
+
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop"
+                        alt="Private Event">
+
+                    <div class="events-card-content">
+
+                        <h3>Private Events</h3>
+
+                        <p>
+                            Create a memorable experience in a beautiful golf course setting.
+                        </p>
+
+                        <ul>
+                            <li>Business gatherings</li>
+                            <li>Retirement celebrations</li>
+                            <li>Group reservations</li>
+                            <li>Special occasions</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- CATERING -->
+                <div class="events-card">
+
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1200&auto=format&fit=crop"
+                        alt="Catering">
+
+                    <div class="events-card-content">
+
+                        <h3>Onsite Catering</h3>
+
+                        <p>
+                            Catering packages are available to complete your event experience.
+                        </p>
+
+                        <ul>
+                            <li>Post-event meals</li>
+                            <li>Snack & beverage service</li>
+                            <li>Flexible menu options</li>
+                            <li>Clubhouse dining space</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+
+            <h2>Plan Your Event</h2>
+
+            <div class="divider"></div>
+
+            <p style="max-width: 650px; margin: 0 auto 25px;">
+                Please contact our Event Department for availability,
+                menus, pricing, and additional event information.
+            </p>
+
+            <a href="contact.html" class="cta-button">
+                Contact Us
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            const text = await response.text();
+            document.getElementById(id).innerHTML = text;
+        }
+
+        loadComponent("navbar", "navbar.html");
+        loadComponent("footer", "footer.html");
+    </script>
+
+</body>
+
+</html>

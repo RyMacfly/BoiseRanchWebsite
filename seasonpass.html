@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2026 Season Passes</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Rye&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
-
 
     <link rel="stylesheet" href="style.css">
 
@@ -22,143 +22,198 @@
         .season-pass h1 {
             font-family: 'Rye', serif;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             margin-bottom: 10px;
         }
 
         .subtitle {
             text-align: center;
-            margin-bottom: 30px;
-            opacity: 0.7;
+            margin-bottom: 35px;
+            opacity: 0.75;
+            font-size: 1.05rem;
         }
 
         .pass-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
 
         .pass-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            /* removed transition */
-        }
-
-        /* REMOVED HOVER EFFECT COMPLETELY */
-
-        /* Contact button */
-        .contact-btn {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 16px;
-            background: #3c281e;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .contact-btn:hover {
-            background: #5a3a2a;
-        }
-
-
-        .pass-card h2 {
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-weight: 600;
-            margin: 5px 0;
-        }
-
-        .note {
-            font-size: 0.9rem;
-            opacity: 0.75;
-            margin-top: 10px;
+            padding: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            cursor: default;
         }
 
         .featured {
             border: 2px solid #3c281e;
         }
 
+        .pass-card h2 {
+            margin-bottom: 14px;
+            color: #3c281e;
+        }
+
+        .price {
+            font-weight: 600;
+            margin: 6px 0;
+        }
+
+        .note {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.75;
+        }
+
         .info-section {
             margin-top: 40px;
-            padding: 20px;
+            padding: 24px;
             background: #f8f6f3;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         .info-section h2 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #3c281e;
+        }
+
+        .info-section ul {
+            padding-left: 28px;
+            margin-top: 10px;
+        }
+
+        .info-section li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 45px;
+            padding: 35px 20px;
+            background: #f8f6f3;
+            border-radius: 12px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 12px;
+            color: #3c281e;
+        }
+
+        .contact-section p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+
+        @media (max-width: 600px) {
+            .season-pass h1 {
+                font-size: 2.1rem;
+            }
+
+            .pass-card {
+                padding: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Nav Bar -->
     <div id="navbar"></div>
 
     <!-- Main -->
     <main>
         <section class="season-pass">
+
             <h1>2026 Season Passes</h1>
+
             <div class="divider"></div>
-            <p class="subtitle">Choose the pass that fits your game</p>
+
+            <p class="subtitle">
+                Choose the pass that best fits your game and enjoy the season at Boise Ranch Golf Course.
+            </p>
 
             <!-- PASS TYPES -->
             <div class="pass-grid">
 
                 <div class="pass-card featured">
                     <h2>Unlimited Pass</h2>
-                    <p class="price">Individual: $2,350.00</p>
-                    <p class="price">Couple: $3,350.00</p>
-                    <p class="note">No restrictions • 7 days in advance tee times</p>
+
+                    <p class="price">Individual — $2,350.00</p>
+                    <p class="price">Couple — $3,350.00</p>
+
+                    <p class="note">
+                        Unlimited golf with no restrictions and tee times available up to 7 days in advance.
+                    </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Weekday Pass</h2>
-                    <p class="price">Individual: $1,794.00</p>
-                    <p class="price">Couple: $2,695.00</p>
-                    <p class="price">Junior Add-on: $495.00</p>
-                    <p class="note">Mon–Fri anytime • 7 days advance tee times</p>
+
+                    <p class="price">Individual — $1,794.00</p>
+                    <p class="price">Couple — $2,695.00</p>
+                    <p class="price">Junior Add-On — $495.00</p>
+
+                    <p class="note">
+                        Valid Monday through Friday anytime with tee times available up to 7 days in advance.
+                    </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Half Price Pass</h2>
+
                     <p class="price">$695.00</p>
-                    <p class="note">50% off green fees • No restrictions • 7 days advance tee times</p>
+
+                    <p class="note">
+                        Receive 50% off green fees with no restrictions and tee times available 7 days in advance.
+                    </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Youth Golf Pass</h2>
+
                     <p class="price">$50.00</p>
+
                     <p class="note">
-                        Valid after 3:00 PM<br>
-                        $10 green fee • Ages 17 & under<br>
-                        Tee times: 2 days in advance
+                        Valid after 3:00 PM for golfers ages 17 and under.<br>
+                        Additional $10 green fee applies.
                     </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Season Cart Pass</h2>
+
                     <p class="price">$795.00</p>
-                    <p class="note">Individual cart pass</p>
+
+                    <p class="note">
+                        Individual season cart pass for the 2026 golf season.
+                    </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Trail Fee Season Pass</h2>
+
                     <p class="price">$440.00</p>
-                    <p class="note">Per privately owned golf cart</p>
+
+                    <p class="note">
+                        Valid for privately owned golf carts.
+                    </p>
                 </div>
 
                 <div class="pass-card">
                     <h2>Season Range Pass</h2>
+
                     <p class="price">$475.00</p>
-                    <p class="note">Unlimited range balls</p>
+
+                    <p class="note">
+                        Unlimited range balls throughout the season.
+                    </p>
                 </div>
 
             </div>
@@ -166,33 +221,67 @@
             <!-- RESTRICTIONS -->
             <section class="info-section">
                 <h2>Restrictions</h2>
+
                 <ul>
-                    <li><strong>Unlimited Pass:</strong> No restrictions • 7 days advance tee times</li>
-                    <li><strong>Weekday Pass:</strong> Monday–Friday anytime • 7 days advance tee times</li>
-                    <li><strong>Half Price Pass:</strong> 50% green fees • No restrictions • 7 days advance tee times
+                    <li>
+                        <strong>Unlimited Pass:</strong>
+                        No restrictions and tee times available 7 days in advance.
                     </li>
-                    <li><strong>Youth Pass:</strong> After 3:00 PM • $10 green fee • 2-day advance tee times</li>
+
+                    <li>
+                        <strong>Weekday Pass:</strong>
+                        Valid Monday through Friday anytime with 7-day advance tee times.
+                    </li>
+
+                    <li>
+                        <strong>Half Price Pass:</strong>
+                        50% off green fees with no restrictions and 7-day advance tee times.
+                    </li>
+
+                    <li>
+                        <strong>Youth Golf Pass:</strong>
+                        Valid after 3:00 PM with a $10 green fee for golfers 17 and under.
+                        Tee times available 2 days in advance.
+                    </li>
                 </ul>
             </section>
 
             <!-- DISCOUNTS -->
             <section class="info-section">
                 <h2>Discounts</h2>
-                <p>Save 3% when paying with cash or check on select passes.</p>
-                <p><strong>Weekday Pass:</strong> $100 discount for seniors & military (max $100 discount)</p>
+
+                <p>
+                    Save 3% when paying with cash or check on select pass purchases.
+                </p>
+
+                <p>
+                    <strong>Weekday Pass:</strong>
+                    Seniors and military personnel receive a $100 discount
+                    (maximum discount of $100).
+                </p>
             </section>
 
-            <!-- CONTACT BUTTON -->
-            <div style="text-align:center; margin-top: 40px;">
-                <a href="contact.html" class="cta-button">Contact Us</a>
-            </div>
+            <!-- CONTACT SECTION -->
+            <section class="contact-section">
+                <h2>Interested in a Season Pass?</h2>
+
+                <p>
+                    Season passes are available through the clubhouse.<br>
+                    Contact us for availability, additional details, or questions about any pass option.
+                </p>
+
+                <a href="contact.html" class="cta-button">
+                    Contact Us
+                </a>
+            </section>
+
         </section>
     </main>
+
     <!-- Footer -->
     <div id="footer"></div>
 
-    <!-- nav/footer script -->
-
+    <!-- Nav/Footer Script -->
     <script>
         async function loadComponent(id, file) {
             const response = await fetch(file);
@@ -203,6 +292,7 @@
         loadComponent("navbar", "navbar.html");
         loadComponent("footer", "footer.html");
     </script>
+
 </body>
 
 </html>
